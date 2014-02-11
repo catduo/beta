@@ -65,7 +65,7 @@
 						break;
 					}
 				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "game.unity3d");
+				u.initPlugin(jQuery("#unityPlayer")[0], "botaboom/game.unity3d");
 			});
 		-->
 		</script>
@@ -125,7 +125,7 @@
 		</style>
 	</head>
 	<body>
-		<p class="header">NonConsole</p>
+		<p class="header">Jovios</p>
 		<button id="download" onclick="Download()" type="submit"></button>
 		<p id="gameName"></p>
 		<div class="content">
@@ -152,11 +152,11 @@
     {
        if (navigator.appVersion.indexOf("Win")!=-1) {
           document.getElementById('download').innerHTML = "Download Windows Game";
-          url = "BotABoom.exe";
+          url = "botaboom/PCgame.zip";
        }
        if (navigator.appVersion.indexOf("Mac")!=-1) {
           document.getElementById('download').innerHTML = "Download MacOS Game";
-          url = "BotABoomMac.app";
+          url = "botaboom/game.app";
        }
        if (navigator.appVersion.indexOf("X11")!=-1) {
           document.getElementById('download').innerHTML = "Nothing for Unix";
@@ -164,7 +164,7 @@
        }
        if (navigator.appVersion.indexOf("Linux")!=-1) {
           document.getElementById('download').innerHTML = "Download Linux Game";
-          url = "botaboom_linux.x86_64";
+          url = "botaboom/Linuxgame.zip";
        }
        if (navigator.appVersion.indexOf("iPhone")!=-1 || navigator.appVersion.indexOf("iPod")!=-1 || navigator.appVersion.indexOf("iPad")!=-1) {
           document.getElementById('download').innerHTML = "Download iPhone Controller";
