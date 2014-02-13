@@ -4,7 +4,7 @@
 		<script type = "text/javascript">
 		function GetGameName(){
 			var gameName = document.getElementById("gameName").innerHTML;
-			u.getUnity().SendMessage("MainCamera", "GetGameName", gameName);
+			u.getUnity().SendMessage("JoviosObject", "GetGameName", gameName);
 		}
 		function SetGameName(gameName){
 			document.getElementById("gameName").innerHTML = gameName;
