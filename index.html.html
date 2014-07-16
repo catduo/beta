@@ -148,42 +148,45 @@
 <script>
     var url = "";
     var OSName="Unknown OS";
-    function GetDownload()
+    function GetDownload(toDownload)
     {
        if (navigator.appVersion.indexOf("Win")!=-1) {
-          document.getElementById('download').innerHTML = "Download Windows Game";
-          url = "botaboom/PCgame.zip";
+          document.getElementById(toDownload).innerHTML = "Download Windows Game";
+          url = "/PCgame.zip";
        }
        if (navigator.appVersion.indexOf("Mac")!=-1) {
-          document.getElementById('download').innerHTML = "Download MacOS Game";
-          url = "botaboom/game.app";
+          document.getElementById(toDownload).innerHTML = "Download MacOS Game";
+          url = "/game.app";
        }
        if (navigator.appVersion.indexOf("X11")!=-1) {
-          document.getElementById('download').innerHTML = "Nothing for Unix";
+          document.getElementById(toDownload).innerHTML = "Nothing for Unix";
           url = "";
        }
        if (navigator.appVersion.indexOf("Linux")!=-1) {
-          document.getElementById('download').innerHTML = "Download Linux Game";
-          url = "botaboom/Linuxgame.zip";
+          document.getElementById(toDownload).innerHTML = "Download Linux Game";
+          url = "/Linuxgame.zip";
        }
        if (navigator.appVersion.indexOf("iPhone")!=-1 || navigator.appVersion.indexOf("iPod")!=-1 || navigator.appVersion.indexOf("iPad")!=-1) {
-          document.getElementById('download').innerHTML = "Download iPhone Controller";
+          document.getElementById(toDownload).innerHTML = "Download iPhone Controller";
           url = "Controller.ipa";
        }
        if (navigator.appVersion.indexOf("Android")!=-1) {
-          document.getElementById('download').innerHTML = "Download Android Controller";
+          document.getElementById(toDownload).innerHTML = "Download Android Controller";
           url = "Controller.apk";
        }
        if (navigator.appVersion.indexOf("BlackBerry")!=-1) {
-          document.getElementById('download').innerHTML = "Nothing for BlackBerry";
+          document.getElementById(toDownload).innerHTML = "Nothing for BlackBerry";
           url = "";
        }
     }
-    GetDownload();
-    function Download(){ 
+    function Download(toDownload){ 
        var iframe = document.createElement("iframe"); 
-       iframe.src = url;
-       iframe.style.display = "none"; 
-       document.body.appendChild(iframe);
+       if(url.length > 0){
+    	   if(url.charAt(0) == "/"){
+    	       iframe.src = toDownload + url;
+    	       iframe.style.display = "none"; 
+    	       document.body.appendChild(iframe);
+    	   }
+       }
     }
 </script>
