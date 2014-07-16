@@ -13,7 +13,8 @@
         <script src="../../js/lib/socket.io.js"></script>       
         <script src="../../js/lib/pomeloclient.js"></script>        
         <script src="../../js/client.js"></script>        
-        <script src="../../js/pop.js"></script>
+        <script src="../../js/pop.js"></script>    
+        <script src="../../js/download.js"></script>
 		<script src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
 		<script type="text/javascript">
 		<!--
@@ -75,6 +76,8 @@
     
     <body>
 		<p class="header"><span>Unity Web Player | </span>Controller</p>
+		<button id="fishcook" onclick="Download('fishcook');" type="submit"></button>
+		<button id="downloadController" onclick="DownloadController();" type="submit"></button>
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
@@ -94,3 +97,8 @@
     </body>
 
 </html>
+		
+		<script type="text/javascript">
+		GetDownloadController();
+		GetDownload("fishcook");
+		</script>
