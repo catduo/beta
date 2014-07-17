@@ -36,11 +36,11 @@
     function GetDownloadController(){
         if (navigator.appVersion.indexOf("iPhone")!=-1 || navigator.appVersion.indexOf("iPod")!=-1 || navigator.appVersion.indexOf("iPad")!=-1) {
             document.getElementById("downloadController").innerHTML = "Download iPhone Controller";
-            controllerUrl = "jovios.com/Controller.ipa";
+            controllerUrl = "http://jovios.com/Controller.ipa";
          }
         else if (navigator.appVersion.indexOf("Android")!=-1) {
             document.getElementById("downloadController").innerHTML = "Download Android Controller";
-            controllerUrl = "jovios.com/Controller.apk";
+            controllerUrl = "http://jovios.com/Controller.apk";
          }
         else{
         	var element = document.getElementById("downloadController");
