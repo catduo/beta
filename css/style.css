@@ -9,6 +9,10 @@ div#jd-content table {
     border: none;
 }
 
+p {
+    text-align: left;
+}
+
 div#jd-content td, div#jd-content th {
     font-size: small;
 }
