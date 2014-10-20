@@ -7,6 +7,7 @@
             Jovios
         </title>
         <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/fishcookBeta.css" type="text/css" />
         <link rel="stylesheet" href="css/unity.css" type="text/css" />
         
         <script src="js/lib/jquery-1.8.0.min.js"></script>        
@@ -19,10 +20,43 @@
     </head>
     
     <body>
-		<button id="downloadController" onclick="DownloadController();" type="submit"></button>
-		<a href="http://jovios.com/games/botaboom"><img src="http://jovios.com/games/botaboom/icon.png" alt="Play BotABoom" width="150" height="150"></a>
-		<a href="http://jovios.com/games/fishcook"><img src="http://jovios.com/games/fishcook/icon.png" alt="Play Fishcook" width="150" height="150"></a>
-		<a href="http://jovios.com/games/snakes"><img src="http://jovios.com/games/snakes/icon.png" alt="Play Snakes" width="150" height="150"></a>
+ 		<img src="img/Title.png" alt="Title" id="Title">
+		<br>
+		<div id = "Avatars">
+ 			<img src="img/PhilFoglio.png" alt="Phil Foglio" id="PhilFoglio" class = Avatar>
+ 			<img src="img/KajaFoglio.png" alt="Kaja Foglio" id="KajaFoglio" class = Avatar>
+ 			<img src="img/PatrickRothfuss.png" alt="Patrick Rothfuss" id="PatrickRothfuss" class = Avatar>
+ 			<img src="img/JenPage.png" alt="Jennifer Page" id="JenPage" class = Avatar>
+ 			<img src="img/AndyLooney.png" alt="Andy Looney" id="AndyLooney" class = Avatar>
+		</div>
+		<div id = "Download">
+			<p class="Choose">Choose a platform to download</p>
+			<div class = Download id="Apple">
+				<a href = img/FishCookOSX.zip download>
+ 					<img src="img/Apple.png" alt="Apple OSX" class = Download>
+					<p class="Choose">OSX</p>
+				</a>
+			</div>
+			<div class = Download id="Windows">
+				<a href = img/FishCookWindows.zip download>
+ 					<img src="img/Windows.png" alt="Windows" class = Download>
+					<p class="Choose">Windows</p>
+				</a>
+			</div>
+			<div class = Download id="Android">
+				<a href = img/FishCook.apk download>
+ 					<img src="img/Android.png" alt="Android" class = Download>
+					<p class="Choose">Android</p>
+				</a>
+			</div>
+			<div class = Download id="Linux">
+				<a href = img/FishCookLinux.zip download>
+ 					<img src="img/Linux.png" alt="Linux" class = Download>
+					<p class="Choose">Linux</p>
+				</a>
+			</div>
+		</div>
+		
     </body>
 
 </html>
