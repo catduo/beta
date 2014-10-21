@@ -4,119 +4,62 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>
-            FishCook - Jovios
+            Jovios
         </title>
-        <link rel="stylesheet" href="../../css/style.css" type="text/css" />
-        <link rel="stylesheet" href="../../css/unity.css" type="text/css" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/fishcookBeta.css" type="text/css" />
+        <link rel="stylesheet" href="css/unity.css" type="text/css" />
         
-        <script src="../../js/lib/jquery-1.8.0.min.js"></script>        
-        <script src="../../js/lib/socket.io.js"></script>       
-        <script src="../../js/lib/pomeloclient.js"></script>        
-        <script src="../../js/client.js"></script>        
-        <script src="../../js/pop.js"></script>    
-        <script src="../../js/download.js"></script>
+        <script src="js/lib/jquery-1.8.0.min.js"></script>        
+        <script src="js/lib/socket.io.js"></script>       
+        <script src="js/lib/pomeloclient.js"></script>        
+        <script src="js/client.js"></script>        
+        <script src="js/pop.js"></script>    
+        <script src="js/download.js"></script>
 		<script src='https://ssl-webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/jquery.min.js'></script>
-		<script type="text/javascript">
-		<!--
-		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-		if (document.location.protocol == 'https:')
-			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-		-->
-		</script>
-		<script type="text/javascript">
-		<!--
-			var config = {
-				width: 800, 
-				height: 600,
-				params: { enableDebugging:"0" }
-				
-			};
-			var u = new UnityObject2(config);
-
-			jQuery(function() {
-
-				var $missingScreen = jQuery("#unityPlayer").find(".missing");
-				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
-				$missingScreen.hide();
-				$brokenScreen.hide();
-				
-				u.observeProgress(function (progress) {
-					switch(progress.pluginStatus) {
-						case "broken":
-							$brokenScreen.find("a").click(function (e) {
-								e.stopPropagation();
-								e.preventDefault();
-								u.installPlugin();
-								return false;
-							});
-							$brokenScreen.show();
-						break;
-						case "missing":
-							$missingScreen.find("a").click(function (e) {
-								e.stopPropagation();
-								e.preventDefault();
-								u.installPlugin();
-								return false;
-							});
-							$missingScreen.show();
-						break;
-						case "installed":
-							$missingScreen.remove();
-						break;
-						case "first":
-						break;
-					}
-				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "game.unity3d");
-			});
-		-->
-		</script>
     </head>
     
     <body>
-<h1>Fish Cook Alpha Demo</h1>
-<h1>Step 1</h1>
-download and install the free Jovios controller app to your touch screen enabled device.
-<br><a href=http://bit.ly/1n1jEUg>Controller for iOS</a>
-<br><a href=http://bit.ly/1tqusDB>Controller for Android</a>
-<br><br>
-<h1>Step 2</h1>
-Make sure the game below loads properly in between the arrows below.  You may need to download the Unity plugin from <a href = http://unity3d.com/webplayer/>here</a>.  Once the game has loaded double click the “Host Game” button.  If the game code is shown as “1234” you may need to refresh the page.
-<h1>Step 3</h1>
-Type the jovios game code into the controller and hit JOIN.  Use the web browser as the main board, and your smart phone as your personal board area.
-<br>
-<img src=GameCodeLoc.png alt=“Jovios Game Code Location” height=200 width=280>
-<img src=GameCode.png alt=“Type in Jovios Game Code” height=200 width=300>
-<br>
-For more information on how to connect your devices to the Fish Cook app prototype, please see our <a href=https://www.youtube.com/watch?v=gzXJRL-ti_U&list=UUTo_VQ2N_ul-j4A0M9hIDKA>demonstration video</a>. There are some instructions built into the prototype, but you can find the <a href=http://www.cheapass.com/sites/default/files/FishCookRules.pdf>complete rules for how to play Fish cook here. </a>
-<br>
-<img src=DownArrow.png alt=“Game Should Be Below” height=50 width=300>
-		</p>
-		<button id="downloadController" onclick="DownloadController();" type="submit"></button>
-		<div class="content">
-			<div id="unityPlayer">
-				<div class="missing">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-					</a>
-				</div>
-				<div class="broken">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
-					</a>
-				</div>
-			</div>
+ 		<img src="img/Title.png" alt="Title" id="Title">
+		<br>
+		<div id = "Avatars">
+ 			<img src="img/PhilFoglio.png" alt="Phil Foglio" id="PhilFoglio" class = Avatar>
+ 			<img src="img/KajaFoglio.png" alt="Kaja Foglio" id="KajaFoglio" class = Avatar>
+ 			<img src="img/PatrickRothfuss.png" alt="Patrick Rothfuss" id="PatrickRothfuss" class = Avatar>
+ 			<img src="img/JenPage.png" alt="Jennifer Page" id="JenPage" class = Avatar>
+ 			<img src="img/AndyLooney.png" alt="Andy Looney" id="AndyLooney" class = Avatar>
 		</div>
-<img src=UpArrow.png alt=“Game Should Be Above” height=50 width=300>
-<p>
-<br>
-In Beta the game will be playable on the single device.
-This is a prototype to demonstrate the basic functionality of the single player and local multiplayer modes of the Fish Cook board game app. 
-It does not contain any bells or whistles, such as sound, new high resolution art, celebrity chefs, or remote play.
-The AI is also pretty stupid right now, but it is capable of making the basic decisions to play the game, even if they’re dumb decisions. 
-We will add all of these things and more with the successful funding of our <a href=http://bit.ly/1nSyu5F>Kickstarter campaign.</a>
-</p>
+		<div id = "Download">
+			<p class="Choose">Download the Fish Cook Beta for a platform by clicking below</p>
+			<div class = Download id="Apple">
+				<a href = img/FishCookOSX.zip download>
+ 					<img src="img/apple.png" alt="Apple OSX" class = Download>
+					<p class="Choose">OSX</p>
+				</a>
+			</div>
+			<div class = Download id="Windows">
+				<a href = img/FishCookWindows.zip download>
+ 					<img src="img/windows.png" alt="Windows" class = Download>
+					<p class="Choose">Windows</p>
+				</a>
+			</div>
+			<div class = Download id="Android">
+				<a href = img/FishCook.apk download>
+ 					<img src="img/android.png" alt="Android" class = Download>
+					<p class="Choose">Android</p>
+				</a>
+			</div>
+			<div class = Download id="Linux">
+				<a href = img/FishCookLinux.zip download>
+ 					<img src="img/linux.png" alt="Linux" class = Download>
+					<p class="Choose">Linux</p>
+				</a>
+			</div>
+			<a href = https://www.kickstarter.com/projects/catduo/fish-cook-digital-edition/posts>
+				<p class="Choose2">Go to the Kickstarter updates to discuss</p>
+			</a>
+		</div>
+		
     </body>
 
 </html>
