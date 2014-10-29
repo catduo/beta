@@ -90,6 +90,7 @@ img#PhilFoglio {
 }
 body{
 	height:100%;
+	background-size: 100%;
 	background-repeat: no-repeat;
 	background-image: url("../img/Background_Evening_3000x1536.png");
     background-attachment: fixed;
